@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' | LC_ALL=C sort -f | xargs -n1 sh -c 'echo "${1%.gif}"' sh
+find . -type f -name '*.gif' | rev | cut -d/ -f1 | rev | cut -d . -f1 | LC_ALL=C sort -f
