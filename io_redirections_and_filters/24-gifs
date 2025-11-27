@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' | LC_ALL=C sort -f | awk '{sub(/\.gif$/,"");print}'
+find . -type f -name '*.gif' | LC_ALL=C sort -f | xargs -n1 sh -c 'echo "${1%.gif}"' sh
