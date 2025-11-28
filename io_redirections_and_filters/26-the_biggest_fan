@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f1 | sort | uniq -c | sort -nr | head -11 | cut -c9-
+head -1 26-the_biggest_fan | cat -A
